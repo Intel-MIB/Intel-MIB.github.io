@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>codetesting.is-a.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #fafaf9;
+      --white:   #ffffff;
+      --ink:     #111110;
+      --mid:     #555550;
+      --light:   #a8a8a3;
+      --rule:    #e4e4e0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--rule);
+      background: var(--white);
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wordmark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 80px 0 64px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .label {
+      font-size: 0.72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4.5vw, 2.9rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .lead {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--mid);
+      max-width: 520px;
+    }
+
+    /* ── Meta row ── */
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--rule);
+    }
+    .meta-item {
+      padding: 32px 0;
+      border-right: 1px solid var(--rule);
+    }
+    .meta-item:last-child { border-right: none; }
+    .meta-key {
+      font-size: 0.68rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 8px;
+    }
+    .meta-val {
+      font-size: 0.85rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    /* ── Body copy ── */
+    .body-section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .body-section p {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--mid);
+      max-width: 560px;
+    }
+
+    /* ── Tags ── */
+    .tags-section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .tags-section .label { margin-bottom: 16px; }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      font-size: 0.75rem;
+      padding: 5px 14px;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      color: var(--mid);
+      background: var(--white);
+      letter-spacing: .02em;
+    }
+
+    /* ── Footer ── */
+    .footer-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--light);
+      letter-spacing: .03em;
+    }
+    .footer-wrap a { color: var(--light); text-decoration: none; }
+    .footer-wrap a:hover { color: var(--ink); }
+
+    @media (max-width: 560px) {
+      .meta { grid-template-columns: 1fr 1fr; }
+      .meta-item:nth-child(2) { border-right: none; }
+      .footer-wrap { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="wordmark">codetesting</div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <p class="label">Personal Development</p>
+      <h1>MCP Integration<br>Testing Endpoint</h1>
+      <p class="lead">A secure, non-commercial endpoint for validating Model Context Protocol integrations in local development environments.</p>
+    </section>
+
+    <div class="meta">
+      <div class="meta-item">
+        <div class="meta-key">Endpoint</div>
+        <div class="meta-val">codetesting.is-a.dev</div>
+      </div>
+      <div class="meta-item" style="padding-left:28px;">
+        <div class="meta-key">Transport</div>
+        <div class="meta-val">Cloudflare Tunnel</div>
+      </div>
+      <div class="meta-item" style="padding-left:28px;">
+        <div class="meta-key">Use</div>
+        <div class="meta-val">Personal · Non-Commercial</div>
+      </div>
+    </div>
+
+    <section class="body-section">
+      <p>This domain serves as a secure tunnel endpoint to test MCP integrations — connecting local development environments to software agents without exposing the local network to the public internet. Strictly personal and non-commercial.</p>
+    </section>
+
+    <div class="tags-section">
+      <p class="label">Technologies</p>
+      <div class="tags">
+        <span class="tag">Model Context Protocol</span>
+        <span class="tag">Cloudflare Tunnel</span>
+        <span class="tag">Local Agent Development</span>
+        <span class="tag">API Testing</span>
+        <span class="tag">Zero-Trust Networking</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <span>codetesting.is-a.dev</span>
+      <span><a href="https://is-a.dev" target="_blank" rel="noopener">is-a.dev</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
